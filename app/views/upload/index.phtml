@@ -1,0 +1,38 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style type="text/css">
+    body{
+        background-image: url("/images/bgMain.jpg");
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+    .stampInfo{
+        padding: 10px;
+        margin:auto;
+        border: 3px solid black;
+        border-radius: 10%;
+        background: transparent;
+        font-size: 16px;
+    }
+    </style>
+    <title>Upload</title>
+</head>
+
+<body>
+    <form action="/upload/upload" method="post" enctype="multipart/form-data">
+        <h3>Upload your stamp here:</h3>
+        <input type="file" name="image" id="fileToUpload" required>
+        <p>title:</p>
+        <input class="stampInfo" type="text" name="title" required>
+        <p>description:</p>
+        <input class="stampInfo" type="text" name="content" required><br>
+        <br>
+        <input class="stampInfo" type="submit" value="Upload Stamp" name="submit">
+    </form>
+    <p><a href="/home">Go back home</a></p>
+</body>
+
+</html>
